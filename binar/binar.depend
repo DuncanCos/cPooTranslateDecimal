@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1614606823 source:c:\users\foxlo\onedrive\documents\code\binar\main.cpp
+	<iostream>
+	"extension.h"
+	"cmath"
+	<string>
+
+1614606295 c:\users\foxlo\onedrive\documents\code\binar\extension.h
+	<iostream>
+	<string>
+
+1614607382 source:c:\users\foxlo\onedrive\documents\code\binar\definition.cpp
+	"extension.h"
+	<iostream>
+	<string>
+
