@@ -10,7 +10,6 @@ private:
 public:
   c_numeration();
   ~c_numeration();
-  //bool setNbBase10(unsigned short nb);
   bool setNbBase10(char *nb);
   unsigned short getNbBase10();
   unsigned short convASCII2Int(char *nb, int taille);
@@ -22,4 +21,4 @@ public:
 
 };
 
-#endif // EXTENSION_H_INCLUDED
+#endif

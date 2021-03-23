@@ -3,21 +3,20 @@
 #include <string>
 using namespace  std;
 
+
+//constructeur de l'objet avec initialisation a 0
 c_numeration::c_numeration()
 {
     m_nbBase10=0;
 }
 
+//destructeur de l'objet
 c_numeration::~c_numeration()
 {
 
 }
-/*
-bool c_numeration::setNbBase10(unsigned short nb)
-{
- m_nbBase10=nb;
-}
-*/
+
+//permet de recuperer le nombre et sa longueur dans un string  puis de le convertir en int
 bool c_numeration::setNbBase10(char *nb)
 {
 
@@ -26,11 +25,13 @@ bool c_numeration::setNbBase10(char *nb)
     convASCII2Int(nb,taille);
 }
 
+//pourrat permettre d'fficher le chiffre en decimal
 unsigned short c_numeration::getNbBase10()
 {
 return m_nbBase10;
 }
 
+//permet de prendre le chiffre qui est en char et de le convertir en int
 unsigned short c_numeration::convASCII2Int(char *nb, int taille)
 {
     for(int i=0;i<taille;i++)
@@ -41,7 +42,8 @@ unsigned short c_numeration::convASCII2Int(char *nb, int taille)
 
 }
 
-std::string c_numeration::DeterminerBinaire()
+//permet de trouver la version binaire du nombre
+string c_numeration::DeterminerBinaire()
 {
     string slt,o;
     int i(0),num(m_nbBase10);
@@ -66,7 +68,8 @@ std::string c_numeration::DeterminerBinaire()
 return o;
 }
 
-std::string c_numeration::DeterminerOctal()
+//permet de trouver la version octal du nombre
+string c_numeration::DeterminerOctal()
 {
 
     string slt,o;
@@ -90,7 +93,8 @@ return o;
 
 }
 
-std::string c_numeration::DeterminerHexa()
+//permet de trouver la version hexadecimal du nombre
+string c_numeration::DeterminerHexa()
 {
 
     string slt,o;
@@ -124,15 +128,14 @@ return o;
 
 }
 
-std::string c_numeration::DeterminerNombre(char base)
+
+//permet de savoir en quoi on va convertir le nombre
+string c_numeration::DeterminerNombre(char base)
 {
 
     string numer;
     string test ="";
     test= test + base;
-    //cout<<base<<endl;
-//cout<<test[0];
-//cout<<base<<endl;
 
     if(base=='b'){
         numer+="0";
@@ -140,14 +143,16 @@ std::string c_numeration::DeterminerNombre(char base)
         numer+="1";
     }else if(base =='h'){
         numer+="2";
+    }else if(base =='s'){
+        numer+="3";
     }else{
     cout<<"fuck";
     }
-    //cout<<numer<<endl;
     return numer;
 }
 
-std::string c_numeration::DetermineShadok(){
+//permet de trouver la version binaire du nombre
+string c_numeration::DetermineShadok(){
 
 string slt,o;
     int i(0),num(m_nbBase10);

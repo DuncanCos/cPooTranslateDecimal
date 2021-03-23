@@ -14,3 +14,18 @@
 	<iostream>
 	<string>
 
+1616492915 source:c:\users\foxlo\onedrive\bureau\cpootranslatedecimal\binar\definition.cpp
+	"extension.h"
+	<iostream>
+	<string>
+
+1616491692 c:\users\foxlo\onedrive\bureau\cpootranslatedecimal\binar\extension.h
+	<iostream>
+	<string>
+
+1616492922 source:c:\users\foxlo\onedrive\bureau\cpootranslatedecimal\binar\main.cpp
+	<iostream>
+	"extension.h"
+	"cmath"
+	<string>
+

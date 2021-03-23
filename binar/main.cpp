@@ -9,8 +9,8 @@ int main(char argc, char *argv[])
 {
     c_numeration num;
     int a;
-    //cout<<argv[2]<<endl;
 
+    //permet de savoir si la methode pour detemeiner le nombre et devent ou derriere la methode pour avoir le nombre a convertir
     for(int i =0;i<argc;i++){
         if(argv[i][0]=='-'){
                 if(i==1){
@@ -23,11 +23,14 @@ int main(char argc, char *argv[])
         }
     }
 
+
+
+    //permet de savoir en quel base convertir le nombre et laffiché
 int counter = 0;
 while(argv[a][++counter] != NULL);
 
+
 cout<<"nombre: "<< num.getNbBase10()<<endl;
-cout<<"Shadok: "<< num.DetermineShadok()<<endl;
 
 
 for(int i(1);i<counter;i++){
@@ -37,7 +40,9 @@ for(int i(1);i<counter;i++){
         cout<<"oct: "<<num.DeterminerOctal()<<endl;
     }else if(num.DeterminerNombre(argv[a][i])=="2"){
         cout<<"Hex: "<<num.DeterminerHexa()<<endl;
-    }else{
+    }else if(num.DeterminerNombre(argv[a][i])=="3"){
+        cout<<"Shadok: "<<num.DetermineShadok()<<endl;
+    } else{
     cout<<"fuck"<<endl;
     }
 }
