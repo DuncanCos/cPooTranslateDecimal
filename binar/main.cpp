@@ -43,7 +43,7 @@ for(int i(1);i<counter;i++){
     }else if(num.DeterminerNombre(argv[a][i])=="3"){
         cout<<"Shadok: "<<num.DetermineShadok()<<endl;
     } else{
-    cout<<"fuck"<<endl;
+    cout<<"error not a good input"<<endl;
     }
 }
 

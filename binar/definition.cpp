@@ -45,25 +45,15 @@ unsigned short c_numeration::convASCII2Int(char *nb, int taille)
 //permet de trouver la version binaire du nombre
 string c_numeration::DeterminerBinaire()
 {
-    string slt,o;
-    int i(0),num(m_nbBase10);
+    string o;
+    int num(m_nbBase10);
 
     while(num>0)
         {
 
             int t =num%2;
-            char y = (char)t;
-            o =to_string(y);
-            slt+=o;
+            o.insert(0,to_string(t));
             num/=2;
-            i++;
-        }
-    i-=1;
-
-        while(i>0)
-        {
-            i--;
-            o+=slt[i];
         }
 return o;
 }
@@ -72,22 +62,14 @@ return o;
 string c_numeration::DeterminerOctal()
 {
 
-    string slt,o;
-    int i(0),z(m_nbBase10);
+    string o;
+    int z(m_nbBase10);
 
     while(z>0)
         {
-
             int t =z%8;
-            slt+=48+t;
+            o.insert(0,to_string(t));
             z=z/8;
-            i++;
-        }
-
-        while(i>0)
-        {
-            i--;
-            o+=slt[i];
         }
 return o;
 
@@ -97,33 +79,23 @@ return o;
 string c_numeration::DeterminerHexa()
 {
 
-    string slt,o;
-    int i(0),num(m_nbBase10);
+    string o;
+    int num(m_nbBase10);
 
     while(num>0)
         {
             int t =num%16;
 
              if(t<=9){
-               slt +=48+t;
-               i++;
+                    char y = (char)(48+t);
+                    o.insert(0,1,y);
             }else{
-            slt +=87+t;
-            i++;
+            char y = (char)(87+t);
+            o.insert(0,1,y);
             }
             num=num/16;
 
         }
-
-i-=1;
-        while(i>=0)
-        {
-           // cout<<i<<endl;
-             o+=slt[i];
-             i--;
-
-        }
-
 return o;
 
 }
@@ -146,7 +118,7 @@ string c_numeration::DeterminerNombre(char base)
     }else if(base =='s'){
         numer+="3";
     }else{
-    cout<<"fuck";
+    cout<<"error";
     }
     return numer;
 }
@@ -174,8 +146,7 @@ string slt,o;
             case 3:
             o.insert(0,"meu");
             break;
-            default:o+="nik";
-
+            default:o+="error";
             }
             num=num/4;
 
